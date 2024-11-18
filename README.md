@@ -1,7 +1,3 @@
-Ja, ik kan de tekst aanpassen zodat de GitHub README-editor de opmaak voor code herkent. Hieronder is de aangepaste versie, waarin ik de juiste Markdown-syntaxis voor code en secties heb toegevoegd:
-
----
-
 # Hand Gesture Interaction Tool
 
 This simple example allows you to explore and experience a different way of interacting with interfaces. Unlike conventional user interfaces that often follow the same efficient and user-friendly approaches, this tool lets you use your left hand as the primary interaction medium. It detects your left hand and draws a circle around your fingertips in real-time.
@@ -55,6 +51,4 @@ If you're interested in exploring more, we're here to help! You can also dive in
 
 Feel free to try out version 1 and suggest or implement features! Contributions are always welcome, whether it’s a bug fix, new feature, or suggestion for improvement. Just fork the project and create a pull request with your changes.
 
----
 
-Door het gebruik van ``` voor code-blokken en een duidelijke structuur in de Markdown, wordt de tekst in GitHub correct weergegeven met de juiste opmaak voor code.
