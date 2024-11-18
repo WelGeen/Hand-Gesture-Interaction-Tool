@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediaPipe Hand Detection with Live Code Editor</title>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+  
+
+  <!-- Correct CDN links for CodeMirror 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+	<body>
+	
+		<div class="left-panel">
+			<h1>Linker Hand Detectie met Code Editor</h1>
+
+			<video class="input_video" style="display: none;"></video>
+			<canvas class="output_canvas" width="640" height="480"></canvas>
+
+			<p>
+			Dit is een eenvoudig voorbeeld waarmee je kunt spelen en ervaren hoe het is om op een andere manier om te gaan met interfaces. In tegenstelling tot de gangbare interfaces die vaak dezelfde, efficiënte en gebruiksvriendelijke benaderingen volgen, biedt deze tool je de mogelijkheid om je linkerhand te gebruiken als interactiemiddel. De tool detecteert je linkerhand en tekent een cirkel op de vingertoppen.
+			</p>
+
+			  <p>
+				Er staan ook een paar korte oefeningen onderaan de pagina waarmee je kunt spelen en meer leert over handgebarentechnologie. 
+				Wil je dieper duiken? We helpen je graag verder! Of verdiep je in <a href="https://www.w3schools.com/html/html5_canvas.asp" target="_blank">HTML Canvas Graphics</a> en ontdek meer over de mogelijkheden van het canvas element.
+			  </p>
+			
+			
+		</div>
+		
+		<div class="right-panel">
+			<div class="panel">
+				<h1>Code Editor</h1>
+				<button id="run-button">Run</button>
+			
+<textarea id="editor" >
+// Write your draw function here
+ctx.beginPath();
+ctx.arc(x, y, 10, 0, 2 * Math.PI);
+ctx.strokeStyle = 'white';
+ctx.lineWidth = 2;
+ctx.stroke(); 
+</textarea>
+			</div> 
+			
+			<div class="panel">
+				<h1>Oefeningen</h1>
+				<div class="button-container">
+				  <button onclick="showOverlay(3)">Speel met kleur</button>
+				  <button onclick="showOverlay(0)">Speel met cirkel</button>
+				  <button onclick="showOverlay(1)">Speel met lijnen</button>
+				  <button onclick="showOverlay(2)">Speel met rechthoek</button>
+				  <button onclick="showOverlay(4)">Speel met letter</button>
+				</div>                            
+			</div> 
+			
+		</div> 
+
+
+		<div class="overlay" id="overlay">
+		  <div class="overlay-content">
+			<button class="close-btn" onclick="closeOverlay()">Sluiten</button>
+			<button class="copy-btn" id="copy-button">Copy to clipboard</button>
+			<h3 id="exercise-title"></h3>
+			<p id="exercise-description"></p>
+			<textarea id="code-editor"></textarea>
+		  </div>
+		</div>
+		
+		
+		<script src="script.js"></script>
+		<script src="exercises.js"></script>
+	</body>
+</html>

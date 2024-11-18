@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+p{
+	line-height: 1.5;
+	column-count: 2; /* Verdeel de tekst in 2 kolommen */
+  column-gap: 20px; /* Voeg ruimte toe tussen de kolommen */
+}
+.left-panel, .right-panel {
+  flex: 1;
+  padding: 10px;
+}
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+canvas {
+  border: 1px solid #ccc;
+}
+.right-panel {
+  border-left: 2px solid #ccc;
+}
+.panel {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  margin: 20px;
+  padding: 20px;
+}
+
+#editor {
+  height: 50vh; /* Verkleint de hoogte van de editor */
+  width: 100%; /* Zorgt ervoor dat de editor de volle breedte gebruikt */
+  border: 1px solid #ddd;
+  resize: vertical; /* Maakt de editor verticaal schaalbaar */
+}
+button {
+  width: 100px;
+  margin: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.button-container {
+  margin: 20px;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 1000;
+  padding: 20px;
+}
+.overlay-content {
+  max-width: 50%;
+  margin: auto;
+  background: #333;
+  padding: 20px;
+  border-radius: 8px;
+}
+.close-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  float: right;
+}
+.copy-btn {
+  background: gray;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+ a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+ a:hover {
+  text-decoration: underline;
+}
+
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .left-panel, .right-panel {
+    flex: none;
+    width: 100%;
+  }
+  .right-panel {
+    border-left: none;
+    border-top: 2px solid #ccc;
+	width: 130%;
+  }
+  #editor {
+    height: 40vh; /* Verkleint de editor op kleinere schermen */
+  }
+  p {
+	  display: none; /* Verbergt de p-elementen */
+	}
+}
